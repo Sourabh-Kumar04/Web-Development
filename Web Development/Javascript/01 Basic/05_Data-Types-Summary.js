@@ -34,7 +34,7 @@ let userEmail; // or
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 // const bigNumber = 9841694256015736n
 
@@ -47,10 +47,37 @@ let muObj = {
 }
 
 const myFunction = function () {
-    console.log("Hello World");
+    // console.log("Hello World");
 }
 
-console.log(typeof bigNumber);
-console.log(typeof outsideTemp);
+// console.log(typeof bigNumber);
+// console.log(typeof outsideTemp);
 
 // For more refer to : https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ******************* Memory *************
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myName = "Raso"
+
+let anotherName = myName
+anotherName = "Arjun"
+
+console.log(myName);
+console.log(anotherName);
+console.log(myName);
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "raso@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
