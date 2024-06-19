@@ -56,18 +56,44 @@ const users = [
 ]
 
 users[1].email
-console.log(rasoUser);
+// console.log(rasoUser);
 
-console.log(Object.keys(rasoUser));   // output is array thus we can apply loop on it
-console.log(Object.values(rasoUser));  // output is loop
-console.log(Object.entries(rasoUser));  // every key value pair is converted in a array which all inside a single array
-
-
-console.log(rasoUser.hasOwnProperty('isLoggedIn'));
+// console.log(Object.keys(rasoUser));   // output is array thus we can apply loop on it
+// console.log(Object.values(rasoUser));  // output is loop
+// console.log(Object.entries(rasoUser));  // every key value pair is converted in a array which all inside a single array
 
 
+// console.log(rasoUser.hasOwnProperty('isLoggedIn'));
 
 
+// Destructor of object
+const course = {
+    coursename: "JavaScript",
+    price: "999",
+    courseInstructor: "Hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor} = course
+console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course
+console.log(instructor);
+
+
+// JSON api
+// {
+//     "name": "raso",
+//     "coursename": "JavaScript",
+//     "price": "999"
+// }
+
+[
+    {},
+    {},
+    {}
+]
 
 
 
