@@ -43,15 +43,15 @@ if (true) {
 
 // +++++++++++++++++++++++++ interesting +++++++++++++++++++
 
-addOne(5)  // can run before intialisation
+console.log(addOne(5))  // can run before intialisation
 function addOne (num) {
     return num + 1
 }
 // addOne(5)
 
-// addTwo(5)  // Error: cannot run before initialisation
-const addTwo = function(num) {    // this is func. but sometimes it is called expression
+// addTwo(5)  // Error: cannot access before initialisation
+const addTwo = function(num) {    // this is function but sometimes it is called expression
     return num + 2
 }
-addTwo(5)
+console.log(addTwo(5))
 
