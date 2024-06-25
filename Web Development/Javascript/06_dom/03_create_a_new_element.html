@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raso</title>
+</hewhitad>
+<body style="background-color: black; color: #fff;">
+   
+    
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 +1)
+    div.setAttribute("title", "generated.title" )   // This is prefered by developers
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    div.innerText = "Raso Chai"   // It always overrride  the value. It directly set the value in this otb saves the one round trip
+    const addText = document.createTextNode("Raso Chai")    // This  is prerred over the code code 
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+</script>
+</html>
