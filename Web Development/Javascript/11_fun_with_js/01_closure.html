@@ -6,7 +6,8 @@
     <title>Closure Learning</title>
 </head>
 <body style="background-color: #212121; color: #fff;">
-    
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
 </body>
 
 <script>
@@ -20,22 +21,55 @@
 
     // init();
 
-    function outer(){
-        let username = "raso"
-        // console.log("Outer", secret);
-        function inner() {
-            let secret = "my123"
-            console.log("INNER", username);
+    // function outer(){
+    //     let username = "raso"
+    //     // console.log("Outer", secret);
+    //     function inner() {
+    //         let secret = "my123"
+    //         console.log("INNER", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("InnerTwo ", username);
+    //         // console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log('TOO OUTER',username);
+
+
+    // function makeFunc(){
+    //     const name = "Raso"
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+    // const myFunc = makeFunc();
+    // myFunc();
+
+</script>
+
+<script>
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = "Orange"
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // } 
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor =  `${color}`
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
         }
-        function innerTwo(){
-            console.log("InnerTwo ", username);
-            // console.log(secret);
-        }
-        inner()
-        innerTwo()
-    }
-    outer()
-    console.log('TOO OUTER',username);
+    };
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+
+    document.getElementById('green').onclick = clickHandler("green")
 
 </script>
 
