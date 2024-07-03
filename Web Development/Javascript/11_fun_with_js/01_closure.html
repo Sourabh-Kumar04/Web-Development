@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Learning</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+
+<script>
+    // function init(){
+    //     let name = "Raso";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+
+    // init();
+
+    function outer(){
+        let username = "raso"
+        // console.log("Outer", secret);
+        function inner() {
+            let secret = "my123"
+            console.log("INNER", username);
+        }
+        function innerTwo(){
+            console.log("InnerTwo ", username);
+            // console.log(secret);
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    console.log('TOO OUTER',username);
+
+</script>
+
+</html>
